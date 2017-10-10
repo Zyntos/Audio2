@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+    <style>
+        div{
+            height: 200px;
+            width: 100%;
+        }
+
+        #div1{
+            background-color: aqua;
+        }
+          #div2{
+            background-color: antiquewhite;
+        }
+          #div3{
+            background-color: darkcyan;
+        }
+          #div4{
+            background-color: darkmagenta;
+        }
+
+
+    </style>
+<title>Zweite Aufgaben</title>
+
+
+</head>
+<body>
+    <div id="div1">
+
+    </div>
+
+    <div id="div2">
+
+    </div>
+
+    <div id="div3">
+
+    </div>
+
+    <div id="div4">
+
+    </div>
+
+</body>
+
+    <script>
+    var context = new AudioContext();
+        var audio1  = new Audio("sound1.wav");
+        var audio2 = document.getElementById("sound2");
+        var source1 = context.createMediaElementSource(audio1);
+        var source2 = context.createMediaElementSource(audio2);
+
+source1.connect(context.destination);
+source2.connect(context.destination);
+
+audio1.play();
+
+    </script>
+
+</html>
